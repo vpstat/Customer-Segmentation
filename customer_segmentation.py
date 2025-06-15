@@ -19,7 +19,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(df[features])
 
 # KMeans clustering
-kmeans = KMeans(n_clusters=4, random_state=42)
+kmeans = KMeans(n_clusters=3, random_state=42)
 df['Segment'] = kmeans.fit_predict(X_scaled)
 
 # Save the segmented data
